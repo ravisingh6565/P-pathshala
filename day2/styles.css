@@ -42,10 +42,11 @@
     background-color: red;
     display: flex;
     flex-wrap: nowrap;
+    justify-content: space-evenly;
 }
 .child{
 background-color: blue;
 border:  1px solid brown;
-width: 30px;
+width: 50px;
 
 }
