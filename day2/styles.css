@@ -38,3 +38,14 @@
     }
 }
 
+.flexbox{
+    background-color: red;
+    display: flex;
+    flex-wrap: nowrap;
+}
+.child{
+background-color: blue;
+border:  1px solid brown;
+width: 30px;
+
+}
