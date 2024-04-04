@@ -51,10 +51,13 @@ width: 50px;
 
 } */
 
-.parent{
+
+/* ************Day 3  ****************** */
+
+/* .parent{
     
     display: grid;
-    /* grid-template-columns: repeat(10,100px); */
+    /* grid-template-columns: repeat(10,100px); 
      grid-template-rows: 50px 50px 50px;
     grid-template-columns:1fr 1fr 1fr  ;
     background-color: lightskyblue;
@@ -91,6 +94,24 @@ background-color: red;
     grid-column-start: 1;
     grid-column-end: 4;
     /* grid-column-start: 5;
-    grid-column-end: 6; */
+    grid-column-end: 6; 
 
+} */
+
+*{
+
+}
+.parent{
+    background-color: blueviolet;
+    color: wheat;
+    width: 400px;
+    height: 400px;
+    text-align: center;
+    padding: 40px;
+
+}
+@media(800px<= width ){
+ .parent{
+    background-color: red;
+ }
 }
