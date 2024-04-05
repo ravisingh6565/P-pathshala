@@ -217,3 +217,18 @@
 // document.getElementById('heading').innerHTML = uName;
 // let res = document.getElementsByTagName("div");
 // res[1].innerHTML = "paragraph changed";
+
+// const ne = document.createElement("h2");
+// ne.innerText = 'new h2 is added';
+// console.log(ne);
+// document.body.appendChild(ne);
+// const firstDiv  = document.getElementsByTagName("div");
+// firstDiv[0].appendChild(ne);
+
+// document.body.prepend(ne);
+// const ele =document.getElementsByTagName("h1");
+// ele.remove();
+
+const element = document.getElementById("heading");
+element.remove();
+
