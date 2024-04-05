@@ -208,6 +208,12 @@
 // : 
 // Object
 
-let uName = prompt("enter the your name");
 
-document.getElementById('heading').innerHTML = uName;
+// ???? ask question. why it is not works?********************************************************************************
+
+
+// let uName = prompt("enter the your name");
+
+// document.getElementById('heading').innerHTML = uName;
+// let res = document.getElementsByTagName("div");
+// res[1].innerHTML = "paragraph changed";
