@@ -48,10 +48,14 @@ const obj = {
 //  console.log(typeof(arr));
 
 function objOrNot(x){
-    if(Array.isArray(x) === false){
-        console.log("it is object");
-    }else{
+    if(Array.isArray(x) !== false){
         console.log("it is array");
+    }else if(typeof(x)!="object"){
+        console.log( "it is "+typeof(x));
     }
+   else{
+    console.log("it is object");
+   }
+
 }
-objOrNot(x);
+objOrNot(5);
