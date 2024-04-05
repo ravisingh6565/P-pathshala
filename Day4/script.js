@@ -89,7 +89,7 @@
 //     name: 'ravi',
 //     lastname: 'singh'
 // }
-  
+
 // let arr = [2, 3, 4];
 
 
@@ -210,4 +210,4 @@
 
 let uName = prompt("enter the your name");
 
- document.getElementById('heading').innerText = uName;
+document.getElementById('heading').innerHTML = uName;
