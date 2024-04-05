@@ -208,5 +208,6 @@
 // : 
 // Object
 
+let uName = prompt("enter the your name");
 
-
+ document.getElementById('heading').innerText = uName;
