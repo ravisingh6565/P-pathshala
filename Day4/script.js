@@ -37,25 +37,25 @@
 
 
 const obj = {
-    name:'ravi',
+    name: 'ravi',
     lastName: 'singh'
 }
 
 
- let x = [2,3,4]; 
+let x = [2, 3, 4];
 //  arr[2] = 111;
 //  console.log(typeof(obj))
 //  console.log(typeof(arr));
 
-function objOrNot(x){
-    if(Array.isArray(x) !== false){
+function objOrNot(x) {
+    if (Array.isArray(x) !== false) {
         console.log("it is array");
-    }else if(typeof(x)!="object"){
-        console.log( "it is "+typeof(x));
+    } else if (typeof (x) != "object") {
+        console.log("it is " + typeof (x));
     }
-   else{
-    console.log("it is object");
-   }
+    else {
+        console.log("it is object");
+    }
 
 }
 objOrNot(5);
