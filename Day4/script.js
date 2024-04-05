@@ -85,12 +85,12 @@
 
 
 
-const obj = {
-    name: 'ravi',
-    lastname: 'singh'
-}
+// const obj = {
+//     name: 'ravi',
+//     lastname: 'singh'
+// }
   
-let arr = [2, 3, 4];
+// let arr = [2, 3, 4];
 
 
 
@@ -102,8 +102,111 @@ let arr = [2, 3, 4];
 
 
 
+// window.console.log(window);
 
+// console.log(window.document);
 
+//console.log(console); all information
+// console {debug: ƒ, error: ƒ, info: ƒ, log: ƒ, warn: ƒ, …}
+// assert
+// : 
+// ƒ assert()
+// clear
+// : 
+// ƒ clear()
+// context
+// : 
+// ƒ context()
+// count
+// : 
+// ƒ count()
+// countReset
+// : 
+// ƒ countReset()
+// createTask
+// : 
+// ƒ createTask()
+// debug
+// : 
+// ƒ debug()
+// dir
+// : 
+// ƒ dir()
+// dirxml
+// : 
+// ƒ dirxml()
+// error
+// : 
+// ƒ error()
+// group
+// : 
+// ƒ group()
+// groupCollapsed
+// : 
+// ƒ groupCollapsed()
+// groupEnd
+// : 
+// ƒ groupEnd()
+// info
+// : 
+// ƒ info()
+// log
+// : 
+// ƒ log()
+// memory
+// : 
+// MemoryInfo {totalJSHeapSize: 26554499, usedJSHeapSize: 24194659, jsHeapSizeLimit: 2172649472}
+// profile
+// : 
+// ƒ profile()
+// profileEnd
+// : 
+// ƒ profileEnd()
+// table
+// : 
+// ƒ table()
+// time
+// : 
+// ƒ time()
+// timeEnd
+// : 
+// ƒ timeEnd()
+// timeLog
+// : 
+// ƒ timeLog()
+// timeStamp
+// : 
+// ƒ timeStamp()
+// length
+// : 
+// 0
+// name
+// : 
+// "timeStamp"
+// arguments
+// : 
+// (...)
+// caller
+// : 
+// (...)
+// [[Prototype]]
+// : 
+// ƒ ()
+// [[Scopes]]
+// : 
+// Scopes[0]
+// trace
+// : 
+// ƒ trace()
+// warn
+// : 
+// ƒ warn()
+// Symbol(Symbol.toStringTag)
+// : 
+// "console"
+// [[Prototype]]
+// : 
+// Object
 
 
 
