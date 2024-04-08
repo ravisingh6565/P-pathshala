@@ -1,0 +1,25 @@
+.news-card{
+background-color: pink;
+max-width: 400px;
+max-height: 300px;
+padding: 24px;
+margin: 40px auto;
+}
+img{
+    height: 150px;
+    width: 350px;
+    background-color: blue;
+    margin-left: 20px;
+}
+#root{
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+
+    
+}
+div{
+margin-left: 100px;
+}
+h3:hover{
+    background-image: linear-gradient(orange,white,green);
+}

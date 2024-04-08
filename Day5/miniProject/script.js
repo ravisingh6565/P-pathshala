@@ -12,22 +12,27 @@ function callAPI() {
 }
 
 // callAPI();
+const root = document.getElementById("root");
 
 function renderUI(data) {
+    const articles = data.articles;
+    for(let i=0;i<articles.length;i++){
 
-    const root = document.getElementById("root");
-
-    const arr = data.articles[0];
+    const arr = articles[i];
     // console.log(arr[0]);
 
     const div = document.createElement("div");
+    div.setAttribute("class","news-card");
     const h3   = document.createElement("h3");
+    const img = document.createElement("img");
+    
+    img.src = arr.urlToImage;
     h3.innerText = arr.title;
     div.appendChild(h3);
-
+    div.appendChild(img);
     // div.innerText = arr.title;
     root.appendChild(div);
-
+    }
 }
 
 // renderUI();
