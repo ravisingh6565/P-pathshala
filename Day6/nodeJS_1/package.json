@@ -1,0 +1,14 @@
+{
+  "name": "nodejs_1",
+  "version": "1.0.0",
+  "description": "only for education",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ravi Singh",
+  "license": "ISC",
+  "dependencies": {
+    "figlet": "^1.7.0"
+  }
+}

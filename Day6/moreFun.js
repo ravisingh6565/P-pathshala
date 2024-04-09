@@ -75,9 +75,12 @@ const states = [
 
 
 
-const ans = states.filter((a)=> a.toLowerCase().includes('india')
-    // const ns = a.toLowerCase();
+// const ans = states.filter((a)=> a.toLowerCase().includes('india')
+//     // const ns = a.toLowerCase();
 
-)
+// )
 
-console.log(ans)
+// console.log(ans)
+
+
+
