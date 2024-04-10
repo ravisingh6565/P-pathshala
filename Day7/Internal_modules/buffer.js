@@ -28,11 +28,41 @@
 //            CallBack in file system   ***********************************
 
 
-const fs = require('fs')
+// const fs = require('fs')
 
-const data = fs.readFile('myReadMe.txt', { encoding: 'utf8' }, (err, data) => {
-    if (err)
-        console.log(err.message)
-    else
-        console.log(data)
+// const data = fs.readFile('myReadMe.txt', { encoding: 'utf8' }, (err, data) => {
+//     if (err)
+//         console.log(err.message)
+//     else
+//         console.log(data)
+// })
+
+const http = require('http')
+const port = 3000
+// const page = '<h1>KIET college</h1>'
+
+const htmlTemplate = `
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+Products Cards
+</body>
+</html>
+`
+const page = htmlTemplate;
+const app = http.createServer((req, res) => {
+    console.log('request received')
+    console.log(req.url)
+    res.writeHead(200,{'content-type':'text/html',
 })
+    // res.end('<h1>hello Ravi singh </h1>'+'<h3>hello Ravi singh </h3>');
+    res.end(page);
+})
+
+app.listen(3000, ()=>
+console.log(`server is running on ${port}`)
+
+);
