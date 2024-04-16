@@ -7,9 +7,12 @@ const port = 3000;
 const data = fs.readFileSync("./data.json","utf8");
 const dataObj = JSON.parse(data).products;
 
+const searchBar =`<input type="search" id="gsearch" name="i-search" for="title" />
+<input type="submit" />`
+
 const cardTemplate = `
 <div class='product-card'>
-<h3>$Title$</h3>
+<h3 name ="title">$Title$</h3>
 <img src="$link$">
 <a href="$hlink$">read more..</a>
 </div>`
@@ -19,13 +22,17 @@ for(let i=0;i<dataObj.length;i++){
         let temp = cardTemplate;
         temp = temp.replace('$Title$',dataObj[i].title);
         // result.push(temp)
-        temp =temp.replace('$hlink$',`/product?id${i}`)
+        temp =temp.replace('$hlink$',`/product?id=${i}`)
         temp = temp.replace('$link$',dataObj[i].images[0]);
         result.push(temp)
     }
-    result = result.join(' ');
+    result = searchBar+(result.join(' ')) ;
+    
 
 const app = http.createServer((req,res)=>{
+    res.writeHead(200, {
+        'content-type': 'text/html'
+    })
     console.log('hi')
     //  const path = url.parse(req.url);
     // let id = path.query;
@@ -38,10 +45,9 @@ const app = http.createServer((req,res)=>{
     if(pathname=='/')
     res.end(result)
 else if(pathname =='/product'){
-        const path = url.parse(req.url);
-        let id = path.query;
-        id = id.slice(2,id.length)
-        console.log(id);
+        const path = url.parse(req.url, true);
+        let id = path.query.id;
+        console.log(path.query);
         // res.end('product')
         let cTemplate = cardTemplate;
         let result = [];
