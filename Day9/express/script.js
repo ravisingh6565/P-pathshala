@@ -8,7 +8,8 @@ app.get('/api/products', async(req,res)=>{
     // res.send('this is get a index page')
     // const data = fs.readFileSync('data.json',"utf8")
     const data = await fsPromises.readFile('data.json',"utf8")
-    const arr = JSON.parse(data).products;
+    // const arr = JSON.parse(data).products;
+    const arr = JSON.parse(data);
     // res.json(obj)
     res.json({
         status:'success',
@@ -81,13 +82,22 @@ app.put('/api/products/:id',async (req,res)=>{
         })
 })
 
-app.delete('api/products/:id', async (req,res)=>{
+app.delete('/api/products/:id', async (req,res)=>{
     const reqId = parseInt(req.params.id);
     const arr = JSON.parse( await fsPromises.readFile("data.json","utf8"))
     const newArr = arr.filter((elem)=>{
         if(elem.id===reqId)
         return false;
-    else return false;
+    else return true;
+    })
+    // console.log(newArr)
+    fsPromises.writeFile("data.json",JSON.stringify(newArr));
+    res.status(204);
+    res.json({
+        status:'success',
+        data:{
+            newProduct:null,
+        }
     })
 })
 app.listen(3000,()=>{
