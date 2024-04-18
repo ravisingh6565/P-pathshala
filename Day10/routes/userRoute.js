@@ -7,9 +7,9 @@ userRouter.route('/')
 .get(userController.getUsers)
 .post(userController.postUsers)
 
-productRouter .route('/:id')
+userRouter.route('/:id')
 .put(userController.putUsers)
-.delete(productsController.deleteusers)
+.delete(userController.deleteusers)
 
 
 module.exports = userRouter;

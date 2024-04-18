@@ -2,7 +2,7 @@ const exp = require('constants');
 const express = require('express')
 // const fsPromises = require('fs/promises');
 const productRouter = require('./routes/productRoute.js');
-const userRouter = require('../routes/userRoute.js');
+const userRouter = require('./routes/userRoute.js');
 // Day10\routes\userRoute.js
 //C:\Users\mi\OneDrive\Desktop\P pathshala\Day10\routes\userRoute.js
 
