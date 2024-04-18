@@ -9,6 +9,10 @@ productRouter.route('/')
 .get(productsController.getAllProducts)
 .post(productsController.addProducts)
 
+productRouter.route('/:id')
+.put(productsController.replaceProducts)
+.delete(productsController.deleteProducts)
+
 
 
 module.exports = productRouter;
