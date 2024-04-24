@@ -2,14 +2,30 @@ const { json } = require('express');
 const productModel = require('../models/productsModel.js')
 
 const getAllProducts = async (req , res)=>{
-    const data = await productModel.find();
-    console.log(data);
-    console.log(req.url);
+    const {sort = 'price',page =1, pageSize = 3,fields='-info', ...q} = req.query;
+    const sortStr = sort.split(',').join(' ');
+    const fieldsStr = fields.split(',').join(' ');
+
+    let query = productModel.find(q);
+    query = query.sort(sortStr);
+
+    const skip = pageSize *(page -1); 
+    query = query.skip(skip).limit(pageSize);
+
+    query = query.select(fieldsStr);
+
+    const products = await query;
+    // const q = req.query;
+    // console.log(q);
+    // const data = await productModel.find(q);
+    // // console.log(data);
+    // console.log(req.url);
     res.json({
         status:'success',
-        results:0,
+        results:products.length,
         data:{
-            products:data,
+            // products:data,
+            products,
         }
     })
 }

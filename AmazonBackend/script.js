@@ -1,6 +1,9 @@
 const express = require("express");
 const productsRouter = require("./routes/productsRoute.js");
-const test = require('./models/productsModel.js')
+const productModel = require('./models/productsModel.js');
+
+const reviewsRouter = require("./routes/reviewsRoute.js");
+const reviewModel = require("./routes/reviewsRoute.js");
 // import mongoose from 'mongoose';
 const mongoose = require("mongoose");
 
@@ -8,6 +11,7 @@ const app = express();
 
 app.use(express.json());
 app.use("/api/products", productsRouter);
+app.use("/api/products/reviews",reviewsRouter);
 
 const url =
   "mongodb+srv://$_USERNAME_$:$_PASSWORD_$@cluster0.zbr7exs.mongodb.net/$_DB_NAME_$?retryWrites=true&w=majority&appName=Cluster0";
