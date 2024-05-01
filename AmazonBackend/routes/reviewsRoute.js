@@ -8,4 +8,7 @@ reviewRouter.route('/')
 .get(reviewsController.getAllReviews)
 .post(reviewsController.addReviews)
 
+reviewRouter.route('/:id')
+.put(reviewsController.replaceReviews)
+
 module.exports = reviewRouter;
